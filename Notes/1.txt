@@ -1,0 +1,45 @@
+-- Importing exporting modules --
+
+# The dependencies what we will only need in development, not in production are called dev dependencies and they are installed by `npm install -D dependency_name`
+
+# If we have to export multile things from a file then we can use `module.exports = {x, y}`. And when importing them in another file we can destructure them. We can export and import anything like variables, functions, objects, arrays etc.
+
+
+-- Core builtin modules --
+    - path -
+        # The __filename global variable will return the whole path of the file you are currently in.
+
+        # The __dirname global variable will return the whole path of the folder of the file you are currently in.
+
+        # To get exactly the file or folder name, we need to use the path module. path.basename(__filename) to get the actual file name and path.dirname(__filename) to get the folder path.
+
+        # To get the extension of the file, path.extname(__filename).
+
+        # To create a path object and use informations from there, path.parse(__filename).
+
+        # To join path, path.join(__dirname, 'newDirName', 'newFileName').
+    
+    - fs -
+        # fs.mkdir(path, func(err)) is used to create a folder
+        # fs.writeFile(path, fileContent, func(err)) is used to create and writing to a file
+        # fs.appendFile(path, appendingContent, func(err)) is used to appending content to an existing file or if the file is not already there then it is created with the content
+        # fs.readFile(path, 'utf8', func(err, data)) is used to read from the file and the file content will get stored on the data parameter.
+        # fs.rename(currentPath, newPath, func(err)) is used to rename a file.
+    
+    - os -
+        # os.platform() to get the os platform
+        # os.arch() to get the CPU architechture
+        # os.cpu() to get core CPU informations
+        # os.freemem() to get free available memory
+        # os.totalmem() to get the total memory
+        # os.homedir() to get homedir
+        # os.uptime() to get the time the system has been up (in seconds)
+    - url -
+        # We first need to require URL constructor from url module
+        # Then we need to create our URL using the constructor
+        # myUrl.href(), myURL.toString() to get the value of the URL.
+        # myUrl.host() to get the host name with the port
+        # myUrl.hostaname() to get the host name without the port
+        # myUrl.search() to get the query parameters value
+        # myUrl.searchParams() to get the params as an object and we can perform forEach() loop on it
+        # myUrl.searchParams().append(param_name, param_value) to add new param to the URL.

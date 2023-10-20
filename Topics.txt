@@ -1,0 +1,11 @@
+# Importing builtin modules, importing and exporting own created modules
+
+# Core modules 
+    # (path)
+        # Show the folder's name, file's name, extension's name, creating path object, joining path.
+    # (fs)
+        # Asynchronous of creating a folder, creating and writing to a file, appending to the file, reading from the file, renaming the file
+    # (os)
+        # os.platform(), os.arch(), os.cpus(), os.freemem(), os.totalmem(), os.homedir(), os.uptime()
+    # (url)
+        # myUrl.host(). myUrl.hostname(), myUrl.pathname(), myUrl.search(), myUrl.searchParams()
