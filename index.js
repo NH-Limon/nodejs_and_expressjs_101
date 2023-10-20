@@ -1,28 +1,11 @@
-const url = require("url").URL;
+const express = require("express");
 
-const myUrl = new url(
-  "http://myepicwebsite.com:5555/hello.html/?id=10&uuid=sdkjdkasdojasdjsoa"
-);
+const app = express();
 
-// Serialize or get the URL value
-console.log(myUrl.href);
-console.log(myUrl.toString());
+app.get("/", (req, res) => {
+  res.send("<h1>Hello Express JS</h1>");
+});
 
-console.log(myUrl.host); // Give the host name with port
-console.log(myUrl.hostname); // Give the host name without port
-
-console.log(myUrl.pathname);
-
-console.log(myUrl.search);
-
-console.log(myUrl.searchParams);
-
-myUrl.searchParams.append("user", "limon");
-console.log(myUrl.href);
-
-console.log(myUrl.search);
-
-// Looping through the params
-myUrl.searchParams.forEach((value, name) => {
-  console.log(`Name: ${name}, Value: ${value}`);
+app.listen(3000, () => {
+  console.log("Server is running on port 3000");
 });
